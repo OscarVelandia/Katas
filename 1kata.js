@@ -5,7 +5,8 @@ function digital_root(n) {
   const sum = arrayOfNumbers.reduce(add);
 
   if(sum > 9) {
-    digital_root(sum);
+    // No olvidar que la función que ejecuta la recursión también tiene que retornar!
+    return digital_root(sum);
   } else {
     console.log(sum);
     return sum
