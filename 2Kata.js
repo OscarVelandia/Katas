@@ -1,3 +1,5 @@
+// 1er ejercicio de http://www.medallia.com.ar/internships/doc/2018.pdf
+
 const upperLimit = 23000;
 // const numbers = [
 //   1, 10, 100, 12, 15, 16, 17, 18, 19, 21, 22, 23, 24,
