@@ -15,11 +15,8 @@ function orchestrateDataClean(upperLimit, listLength, numbers) {
 
   const listWithSecondFilterApplied = listWithFirstFilterApplied
     .map((_, index) => {
-      // Se copia para poder hacer el splice en el array pasado al tercer filtro. 
-      const copyToModify = [...listWithFirstFilterApplied];
-
       if (listWithFirstFilterApplied.length > (index + 1)) {
-        return listWithThirdFilterApplied(copyToModify.splice(index), upperLimit);
+        return listWithThirdFilterApplied(listWithFirstFilterApplied.slice(index), upperLimit);
       } 
     })
     .filter(array => array && array.length); // Para quitar arrays vacios
